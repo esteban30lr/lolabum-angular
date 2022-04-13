@@ -1,0 +1,23 @@
+.contenedor{
+    background-color: rgba(109, 109, 109, 0.9);
+    border-radius: 4px;
+    padding: 1px;
+    margin: 1rem;
+}
+
+.lista{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style: none;
+    margin: 1rem;
+}
+
+.lista :hover{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.lista ul li{
+    background: black;
+}
