@@ -1,23 +1,30 @@
-.contenedor{
+body {
+    font-family: 'Manjari', sans-serif;
+}
+
+.contenedor {
     background-color: rgba(109, 109, 109, 0.9);
     border-radius: 4px;
     padding: 1px;
     margin: 1rem;
 }
 
-.lista{
+.lista {
     color: white;
     text-decoration: none;
-    font-family: sans-serif;
     list-style: none;
     margin: 1rem;
-}
-
-.lista :hover{
-    cursor: pointer;
+    padding: auto;
     display: inline-block;
+    transition: color 0.5s;
 }
 
-.lista ul li{
-    background: black;
+.lista :hover {
+    cursor: pointer;
+    color: black;
+    transition: color 0.5s;
+}
+
+.lista li {
+    margin: 5px 0;
 }

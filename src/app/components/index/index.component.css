@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.item{
+    background: tomato;
+    width: 200px;
+    height: 200px;
+    margin: 200px;
+    transition: width 0.5s;
+}
+
+.item:hover{
+    background: skyblue;
+    width: 80%;
+}

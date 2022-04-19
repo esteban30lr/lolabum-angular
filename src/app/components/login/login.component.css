@@ -4,6 +4,7 @@ body{
     font-family: sans-serif;
     height: 100vh;
 }
+
 .login{
     width: 320px;
     height: 420px;
@@ -56,6 +57,7 @@ body{
     font-size: 18px;
     border-radius: 20px;
     color: #FFF;
+    transition: background-color 0.5s;
 }
 .login input[type="submit"]:hover{
     color: #FFF;
