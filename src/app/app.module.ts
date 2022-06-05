@@ -7,6 +7,9 @@ import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './components/index/index.component';
+import { TestComponent } from './components/test/test.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,11 +18,14 @@ import { IndexComponent } from './components/index/index.component';
     loginComponent,
     MainComponent,
     HeaderComponent,
-    IndexComponent
+    IndexComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
