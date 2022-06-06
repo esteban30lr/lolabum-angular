@@ -21,8 +21,10 @@
           <td>{{user.correo}}</td>
           <td>{{user.telefono}}</td>
           <td>{{user.contrasena}}</td>
-          <td><button class="btn btn-danger text-white" (click)="Eliminar(user.id)">Borrar</button>&nbsp;<button
-              class="btn btn-info text-white" (click)="Seleccionar(user.id)">Seleccionar</button></td>
+          <div class="botones">
+            <td><button class="btn btn-danger text-white" (click)="Eliminar(user.id)">Borrar</button>&nbsp;<button
+                class="btn btn-info text-white" (click)="Seleccionar(user.id)">Seleccionar</button></td>
+          </div>
         </tr>
       </tbody>
     </table>
