@@ -27,6 +27,10 @@ export class PhpService {
     return this.http.get(`${this.url}seleccionar.php?id=${id}`);
   }
 
+  iniciarsesion(id:any,contrasena:any){
+    return this.http.get(`${this.url}iniciarsesion.php?id=${id}&contrasena=${contrasena}`);
+  }
+
   modificar(usuario:any){
     return this.http.post(`${this.url}update.php`,JSON.stringify(usuario));
   }

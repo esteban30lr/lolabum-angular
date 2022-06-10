@@ -3,20 +3,29 @@
 <body>
   <div class="container">
     <div class="login">
-      <h1>{{tituloLogin}}</h1>
-      <form action="">
-          <label for="username">Usuario</label>
-          <input type="text" placeholder="Ingrese usuario">
-
-          <label for="password">contraseña</label>
-          <input type="password" placeholder="Ingrese contraseña">
-
-          <input type="submit" value={{comentario}}>
-          <a href="#">Olvidé mi contraseña</a><br>
-          <a href="#">{{noCuenta}}</a>
-      </form>  
+      <h1>INICIAR SESIÓN</h1>
+      <h1>{{estado}}</h1>
+      <p>
+        Identificacion <input class="form-control m-1" type="text" [(ngModel)]="usuario.id"
+          placeholder="square pantsu">
+      </p>
+      <p>
+        Clave <input  class="form-control m-1" type="password" [(ngModel)]="usuario.contrasena"
+          placeholder="***********">
+      </p>
+      <div class="row">
+        <div class="col-sm-2 ">
+          <p><button class="btn btn-outline-dark float-left" (click)="Iniciar()">Agregar</button></p>&nbsp;
+        </div>
+        <div class="col-sm-2 ">
+          <p><button class="btn btn-outline-dark float-left" (click)="MostrarUsuario()">Mostrar</button></p>&nbsp;
+        </div>
+        <div class="col-sm-2 ">
+          <p><button class="btn btn-outline-dark float-left" (click)="ReiniciarUsuario()">Reiniciar</button></p>&nbsp;
+        </div>
+      </div>
+  
     </div>
   </div>
-
 </body>
 </html>

@@ -7,32 +7,12 @@ import { PhpService } from 'src/app/services/php.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  tittle = 'VISTA DE USUARIOS'
+  estado = null
 
-  usuarios:any;
-
-  usuario = {
-    id : null,
-    contraseña: null,
-    nombre: null,
-    telefono: null,
-    correo: null
-  }
-
-  constructor(private phpservide: PhpService) { }
+  constructor() {}
 
   ngOnInit(): void {
-
   }
-  hayRegistros(){
-    return true;
-  }
-  MostrarTodo(){
-    this.phpservide.mostrarTodo().subscribe(result => this.usuarios = result);
-  }
-  Agregar(){
-
-  }
-
+  
 
 }

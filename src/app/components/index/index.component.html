@@ -1,31 +1,12 @@
-<div class="container">
-    <h1>{{tittle}}</h1>
-    
-    <div class="col-sm-7 float-left">
-      <table border="0" span="0" *ngIf="hayRegistros(); else sinarticulos" class="table table-borderless table-striped table-dark"  style=" border:0px; box-shadow:3px 3px 5px 4px rgba(0,0,0,0.25);">
-        <thead class="thead-dark" style="background:black; color:white;">
-          <tr>
-            <td>IdUsuario</td>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Correo</td>
-            <td>Numero</td>
-            <td>Acciones</td>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of usuarios">
-            <td>{{user.id}}</td>
-            <td>{{user.nombre}}</td>
-            <td>{{user.apellido}}</td>
-            <td>{{user.correo}}</td>
-            <td>{{user.numero}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  
-    <ng-template #sinarticulos><p>No hay articulos.</p></ng-template>
-  
-  </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{estado}}</h1>
+</body>
+</html>
