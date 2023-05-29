@@ -4,6 +4,8 @@ import { IndexComponent } from './components/index/index.component';
 import { loginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { TestComponent } from './components/test/test.component';
+import { ProductoComponent } from './components/producto/producto.component';
+import { CompraComponent } from './components/compra/compra.component';
 
 const routes: Routes = [
     {
@@ -11,17 +13,25 @@ const routes: Routes = [
         component: loginComponent
     },
     {
-        path:'main',
+        path: 'main',
         component: MainComponent
     },
     {
-        path:'index',
+        path: 'index',
         component: TestComponent
+    },
+    {
+        path: 'productos',
+        component: ProductoComponent
+    },
+    {
+        path: 'compra',
+        component: CompraComponent
     }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,117 +1,71 @@
-<!DOCTYPE html>
 <html lang="es">
+<div class="container">
+  <h1>GESTOR DE PROVEEDORES</h1>
+  <div class="tabla">
+    <table style=" border:0px; box-shadow:3px 3px 5px 4px rgba(0,0,0,0.25);">
+      <thead class="thead-dark" style="background:black; color:white;">
+        <tr>
+          <td>IDENTIFICACION</td>
+          <td>NOMBRE</td>
+          <td>DIRECCION</td>
+          <td>TELEFONO</td>
+          <td>WEB</td>
+          <td>Acciones</td>
 
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap" rel="stylesheet">
-</head>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prove of proveedores">
+          <td>{{prove.id_proveedor}}</td>
+          <td>{{prove.nombre_proveedor}}</td>
+          <td>{{prove.direccion_proveedor}}</td>
+          <td>{{prove.telefono_proveedor}}</td>
+          <td>{{prove.web_proveedor}}</td>
+          <div class="botones">
+            <td><button class="btn btn-danger text-white" (click)="Eliminar(prove.id_proveedor)">Borrar</button>&nbsp;<button
+                class="btn btn-info text-white" (click)="Seleccionar(prove.id_proveedor)">Seleccionar</button></td>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<body>
-    <header class="title">
-        <h1>Lolabum</h1>
-    </header>
-    <div class="container">
-        <header class="header">
-            <h1>LOGO</h1>
-        </header>
-        <main class="content">
-            <article class="article">
-                <h1>Resumen</h1>
-                <p>El proyecto articulador propuesto tiene como objetivo crear una herramienta capaz de ayudar a
-                    pequeñas empresas a tener un mayor prestigio comercial y administrar de una manera más fácil e
-                    intuitiva estas herramientas virtuales, y que pueda servir también para que sus potenciales clientes
-                    puedan conocer sus negocios, productos o servicios a ofrecer, todo esto de una manera cómoda para el
-                    usuario y que este habilitada para poder proporcionar información necesaria para los administradores
-                    para realizar análisis de datos importantes como ventas o ganancias y así tomar decisiones que los
-                    ayuden en el crecimiento de sus emprendimientos, además de incluir funciones innovadoras como la
-                    posibilidad de manejar todo de forma remota para minimizar tiempo y tener un mejor manejo de la
-                    información de una manera simplificada, dándose la posibilidad de incrementar su eficiencia
-                    comercial.</p>
-            </article>
-            <article class="article">
-                <h1>Planteamiento del problema</h1>
-                <p> Muchas empresas o microempresas colombianas tienen acceso a muchas herramientas para proyectar sus
-                    productos en materiales virtuales tales como las redes sociales. Sin embargo, a la hora de realizar
-                    sus propios estadísticos o tener una herramienta capaz de servir como plataformas neta de la
-                    empresa, se ven restringidos al uso o la necesidad de recurrir a software empresarial no siempre
-                    económico y que sea capaz de cubrir en completo las necesidades de los negocios, se ve por lo tanto
-                    la necesidad de cubrir dicha problemática, debido a que puede ser un obstáculo muy grande para los
-                    emprendimientos nuevos poder acceder a dichas tecnologías empresariales, y que pueden como resultado
-                    dar de baja a muchas grandes ideas y emprendimientos nuevos en Colombia, ya que, en el mundo actual,
-                    los portales digitales son fundamentales para el éxito o el fracaso de una empresa, no solo para
-                    darse a conocer y atraer clientes, sino que en la calidad de estos lo potenciales clientes puedan
-                    tener una experiencia de servicio digital satisfactorio como para finalmente hacer uso de la empresa
-                    tanto en compras o el uso de algunos de sus servicios, por lo que es importante darle a las empresas
-                    esa facilidad de tener una herramienta que realmente sea capaz de aumentar su productividad e
-                    impulsarlas a un siguiente nivel que pueda ser accesible para todo el mundo.</p><br>
-                <p>Uno de los principales problemas en el comercio actual es la imposibilidad de tener un gran
-                    crecimiento comercial a causa de las grandes empresas que tienen fuentes publicitarias en grandes
-                    cantidades y diversos lugares, el principal inconveniente de esta estrategia de marketing se genera
-                    cuando notamos que gran parte del mercado comercial se ve representado en microempresas con poco
-                    reconocimiento, emprendedores que no tienen muchas posibilidades a darse a conocer o comercios
-                    informales que a causa de la necesidad recurren a redes sociales para incrementar su productividad,
-                    además de esto este sector afectado en su mayoría no tienen un control de información o
-                    administración de recursos adecuados porque no tienen conocimientos de estas herramientas para
-                    incrementar sus ganancias y disminuir sus recursos.</p>
-            </article>
-            <article class="article">
-                <h1>Justificacion</h1>
-                <p>Los motivos que llevaron al equipo de trabajo a la realización del proyecto son los efectos positivos
-                    que puede tener nuestra propuesta en la economía nacional, impulsando nuevos emprendimientos y
-                    generando de manera indirecta mejoras en la calidad de vida de las personas y que estas puedan
-                    cumplir sus metas de una manera más eficiente, porque este sector no cuenta con la capacidad
-                    necesaria para recurrir a herramientas aunque sean de pago que puedan impulsar de una manera eficaz
-                    e intuitiva y lograr llegar a nuevos objetivos y horizontes, por medio de este desarrollo será
-                    posible para ellos sobrepasar la barrera del mundo digital y el comercio electrónico que funge como
-                    parte fundamental en el triunfo de las empresas en la economía y aprovechando el auge de las
-                    tecnologías, plataformas y emprendimientos digitales y todos los beneficios y facilidades que estos
-                    pueden ofrecer a estas nuevas empresas que tienen la necesidad de darse a conocer y poder
-                    administrar de mejor manera sus crecimientos y el contacto tanto con sus cliente como de manera
-                    interna. Además, gran parte de este mercado comercial que es poco reconocido o directamente empieza
-                    a competir con empresas conocidas podrá verse beneficiado al tener una herramienta que
-                    constantemente pueda utilizar en mejorar siempre su eficiencia y crecer de manera exponencial en el
-                    mercado y poder tener una buena influencia y prestigio comercial.</p>
-            </article>
-        </main>
-        <aside class="sidebar">
-            <div>
-                <h2>Objetivos</h2>
-                <br>
-                <h3>Objetivos generales</h3>
-                <br>
-                <p>Desarrollar un aplicativo web y una aplicación para comercialización y venta de productos y servicios
-                    en empresas.</p>
-                <br>
-                <h3>Objetivos especificos</h3>
-                <br>
-                <p>• Identificar los factores más importantes que afectan en la productividad de una empresa para
-                    empezar a trabajar desde esas bases con funciones que se encarguen de ayudar a mejorar todos los
-                    aspectos de una empresa.
+  <ng-template #sinarticulos>
+    <p>No hay articulos.</p>
+  </ng-template>
 
-                </p>
-                <br>
-                <p>
-                    • Incrementar la satisfacción de los clientes a la hora de realizar comprar a través de la
-                    herramienta
-                    generada por medio de las interfaces intuitivas y las distintas interacciones con el sistema.
-                </p>
-                <br>
-                <p>
-                    • Acercar a los clientes y sus necesidades a los administrativos y gerentes de los negocios y
-                    empresas
-                    para poder de esta forma incrementar calidad de los productos por consiguiente más beneficio para
-                    clientes y empresas.
-                </p>
-                <br>
-            </div>
-        </aside>
-        <footer class="footer">
-            <h4>CONOCE MAS ACERCA DEL PROYECTO</h4>
-            <br>
-            <a href="/">iniciar sesion</a>
-        </footer>
+  <div class="login">
+    <h1>gestionar proveedor</h1>
+    <p>
+      Nombre <input type="text" class="form-control m-1" type="text" [(ngModel)]="proveedor.nombre_proveedor"
+        placeholder="namaewa esponje bobu">
+    </p>
+    <p>
+      Identificacion <input type="text" class="form-control m-1" type="text" [(ngModel)]="proveedor.id_proveedor"
+        placeholder="square pantsu">
+    </p>
+    <p>
+      Telefono <input maxlength="13" type="tel" class="form-control m-1" type="text"
+        [(ngModel)]="proveedor.telefono_proveedor" placeholder="+569 3844 6175">
+    </p>
+    <p>
+      web <input type="web" class="form-control m-1" type="text" [(ngModel)]="proveedor.web_proveedor"
+        placeholder="web.com">
+    </p>
+    <p>
+      Direccion <input maxlength="50" type="text" class="form-control m-1" type="text"
+        [(ngModel)]="proveedor.direccion_proveedor" placeholder="direccion">
+    </p>
+    <div class="row">
+      <div class="col-sm-2 ">
+        <p><button class="btn btn-outline-dark float-left" (click)="Agregar()">Agregar</button></p>&nbsp;
+      </div>
+      <div class="col-sm-2 offset-md-2">
+        <p><button class="btn btn-outline-dark float-right" (click)="Modificar()">Modificar</button></p>
+      </div>
     </div>
-</body>
+
+  </div>
+</div>
 
 </html>

@@ -12,11 +12,12 @@ export class TestComponent implements OnInit {
   usuarios=null;
 
   usuario = {
-    id : null,
-    contrasena: null,
-    nombre: null,
-    telefono: null,
-    correo: null
+    id_cliente: null,
+    nombre_cliente: null,
+    apellido_cliente: null,
+    telefono_cliente: null,
+    direccion_cliente:null,
+    correo_cliente:null
   }
 
   constructor(private phpservide: PhpService) { }
@@ -37,13 +38,13 @@ export class TestComponent implements OnInit {
     console.log(this.usuario)
     this.phpservide.agregar(this.usuario).subscribe((res:any)=>{
       console.log(res);
+      this.MostrarTodo();
       if(res['resultado'] === 'OK'){
         alert(res['mensaje']);
       }else{
         alert('Ocurrió un problema');
       }
     });
-    this.MostrarTodo();
     console.log(this.usuarios);
   }
 

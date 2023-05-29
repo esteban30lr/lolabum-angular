@@ -3,26 +3,26 @@ body {
     padding: 0;
     font-family: sans-serif;
     height: 100vh;
-  }
-  
-  .container {
+}
+
+.container {
     border-radius: 4px;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: left;
     margin-left: 20%;
-  }
-  
-  .tabla {
+}
+
+.tabla {
     padding: 3rem;
     margin: 1%;
     border-radius: 4px;
     text-decoration: none;
     margin-left: 5%;
-  }
-  
-  .tabla button {
+}
+
+.tabla button {
     border-radius: 4px;
     color: #FFF;
     background: rgb(124, 18, 18);
@@ -32,26 +32,26 @@ body {
     margin-top: 5px;
     height: 90%;
     width: max-content;
-  }
-  
-  .tabla button:hover {
+}
+
+.tabla button:hover {
     color: #FFF;
     background: red;
     cursor: pointer;
-  }
-  
-  .tabla thead tr td {
+}
+
+.tabla thead tr td {
     margin: 2%;
     padding: 0.5rem;
     text-transform: uppercase;
     border-radius: 4px;
-  }
-  
-  table {
+}
+
+table {
     border-radius: 4px;
-  }
-  
-  .login {
+}
+
+.login {
     margin-top: 180px;
     margin-left: 5%;
     width: 350px;
@@ -61,33 +61,33 @@ body {
     top: 50%;
     left: 75%;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
     border-radius: 10px;
-  }
-  
-  .login label {
+}
+
+.login label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
-  }
-  
-  .login h1 {
+}
+
+.login h1 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
-  }
-  
-  .login input {
+}
+
+.login input {
     width: 100%;
     margin-bottom: 20px;
-  }
-  
-  .login input[type="text"],
-  .login input[type="password"] {
+}
+
+.login input[type="text"],
+.login input[type="password"] {
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -95,15 +95,15 @@ body {
     height: 40px;
     color: white;
     font-size: 16px;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-  
-  .login button {
+}
+
+.login button {
     border: none;
     outline: none;
     height: 40px;
@@ -112,22 +112,75 @@ body {
     border-radius: 20px;
     color: #FFF;
     transition: background-color 0.5s;
-  }
-  
-  .login button:hover {
+}
+
+.login button:hover {
     color: #FFF;
     background: red;
     cursor: pointer;
-  }
-  
-  .login a {
+}
+
+.login a {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
     color: darkgray;
-  }
-  
-  .login a:hover {
+}
+
+.login a:hover {
     color: white;
-  }
-      
+}
+
+/* Estilo base para el select */
+select {
+    appearance: none;
+    /* Quita el estilo nativo del sistema operativo */
+    padding: 10px;
+    /* Espaciado interno */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    border: 1px solid #ccc;
+    /* Borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    background-color: #fff;
+    /* Color de fondo */
+    color: #333;
+    /* Color del texto */
+    width: 200px;
+    /* Ancho del select */
+}
+
+/* Estilo al pasar el cursor por encima */
+select:hover {
+    border-color: #999;
+    /* Borde resaltado */
+}
+
+/* Estilo al enfocar el select */
+select:focus {
+    outline: none;
+    /* Quita el contorno al enfocar */
+    border-color: #555;
+    /* Borde resaltado */
+}
+
+/* Estilo de la flecha desplegable */
+select::after {
+    content: '\25BC';
+    /* Código Unicode de la flecha hacia abajo */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Evita que se pueda hacer clic en la flecha */
+}
+
+/* Estilo al desplegar las opciones */
+select option {
+    background-color: #fff;
+    /* Color de fondo de las opciones */
+    color: #333;
+    /* Color del texto de las opciones */
+}

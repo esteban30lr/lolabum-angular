@@ -7,23 +7,25 @@
         <tr>
           <td>IDENTIFICACION</td>
           <td>NOMBRE</td>
-          <td>CORREO</td>
+          <td>APELLIDO</td>
           <td>NUMERO</td>
-          <td>CONTRASEÑA</td>
+          <td>CORREO</td>
+          <td>DIRECCION</td>
           <td>Acciones</td>
 
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let user of usuarios">
-          <td>{{user.id}}</td>
-          <td>{{user.nombre}}</td>
-          <td>{{user.correo}}</td>
-          <td>{{user.telefono}}</td>
-          <td>{{user.contrasena}}</td>
+          <td>{{user.id_cliente}}</td>
+          <td>{{user.nombre_cliente}}</td>
+          <td>{{user.apellido_cliente}}</td>
+          <td>{{user.telefono_cliente}}</td>
+          <td>{{user.correo_cliente}}</td>
+          <td>{{user.direccion_cliente}}</td>
           <div class="botones">
-            <td><button class="btn btn-danger text-white" (click)="Eliminar(user.id)">Borrar</button>&nbsp;<button
-                class="btn btn-info text-white" (click)="Seleccionar(user.id)">Seleccionar</button></td>
+            <td><button class="btn btn-danger text-white" (click)="Eliminar(user.id_cliente)">Borrar</button>&nbsp;<button
+                class="btn btn-info text-white" (click)="Seleccionar(user.id_cliente)">Seleccionar</button></td>
           </div>
         </tr>
       </tbody>
@@ -37,24 +39,28 @@
   <div class="login">
     <h1>gestionar usuario</h1>
     <p>
-      Nombre <input type="text" class="form-control m-1" type="text" [(ngModel)]="usuario.nombre"
+      Nombre <input type="text" class="form-control m-1" type="text" [(ngModel)]="usuario.nombre_cliente"
         placeholder="namaewa esponje bobu">
     </p>
     <p>
-      Identificacion <input type="text" class="form-control m-1" type="text" [(ngModel)]="usuario.id"
+      Identificacion <input type="text" class="form-control m-1" type="text" [(ngModel)]="usuario.id_cliente"
         placeholder="square pantsu">
     </p>
     <p>
-      Correo <input type="email" class="form-control m-1" type="text" [(ngModel)]="usuario.correo"
+      Apellido <input type="text" class="form-control m-1" type="text" [(ngModel)]="usuario.apellido_cliente"
+        placeholder="square pantsu">
+    </p>
+    <p>
+      Numero <input maxlength="13" type="tel" class="form-control m-1" type="text"
+        [(ngModel)]="usuario.telefono_cliente" placeholder="+569 3844 6175">
+    </p>
+    <p>
+      Correo <input type="email" class="form-control m-1" type="text" [(ngModel)]="usuario.correo_cliente"
         placeholder="shikamaru.nara@gmail.com">
     </p>
     <p>
-      Numero <input maxlength="13" type="tel" class="form-control m-1" type="text" [(ngModel)]="usuario.telefono"
-        placeholder="+569 3844 6175">
-    </p>
-    <p>
-      Clave <input type="password" class="form-control m-1" type="text" [(ngModel)]="usuario.contrasena"
-        placeholder="***********">
+      Direccion <input maxlength="50" type="text" class="form-control m-1" type="text"
+        [(ngModel)]="usuario.direccion_cliente" placeholder="direccion">
     </p>
     <div class="row">
       <div class="col-sm-2 ">

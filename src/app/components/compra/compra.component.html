@@ -1,0 +1,65 @@
+<html lang="es">
+<div class="container">
+    <h1>GESTOR DE COMPRA</h1>
+    <div class="tabla">
+        <table style=" border:0px; box-shadow:3px 3px 5px 4px rgba(0,0,0,0.25);">
+            <thead class="thead-dark" style="background:black; color:white;">
+                <tr>
+                    <td>FECHA</td>
+                    <td>PRECIO</td>
+                    <td>CANTIDAD</td>
+                    <td>NOMBRE PRODUCTO</td>
+                    <td>NOMBRE CLIENTE</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pro of recibos">
+                    <td>{{pro.fecha.date}}</td>
+                    <td>{{pro.total}}</td>
+                    <td>{{pro.cantidad}}</td>
+                    <td>{{pro.nombre_producto}}</td>
+                    <td>{{pro.nombre_cliente}}</td>
+                </tr>
+                <tr>
+                    <td>total</td>
+                    <td>{{total.total}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <ng-template #sinarticulos>
+        <p>No hay articulos.</p>
+    </ng-template>
+
+    <div class="login">
+        <h1>gestionar compra</h1>
+        <p>
+            cliente <select [(ngModel)]="cliente.nombre_cliente" (ngModelChange)="actualizarCliente($event)">
+                <option *ngFor="let cliente of clientes" [value]="cliente.nombre_cliente">
+                    {{cliente.nombre_cliente}}
+                </option>
+            </select>
+        </p>
+        <p>
+            cantidad <input type="text" class="form-control m-1" type="text" [(ngModel)]="compra.cantidad"
+                placeholder="9" required>
+        </p>
+        <p>
+            producto <select [(ngModel)]="producto.nombre_producto" (ngModelChange)="actualizarProducto($event)">
+                <option *ngFor="let producto of productos" [value]="producto.nombre_producto">
+                    {{producto.nombre_producto}}
+                </option>
+            </select>
+        </p>
+        <div class="row">
+            <div class="col-sm-2 ">
+                <p><button class="btn btn-outline-dark float-left" (click)="Agregar()">Agregar</button></p>&nbsp;
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</html>
