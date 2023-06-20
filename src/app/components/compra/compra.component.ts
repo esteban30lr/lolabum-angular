@@ -143,6 +143,7 @@ export class CompraComponent implements OnInit {
       } else {
         alert('Ocurrió un problema');
       }
+      this.actualizarCliente(this.cliente.nombre_cliente);
     });
   }
 
