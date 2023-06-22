@@ -2,8 +2,8 @@
 <div class="container">
   <h1>GESTOR DE USUARIOS</h1>
   <div class="tabla">
-    <table style=" border:0px; box-shadow:3px 3px 5px 4px rgba(0,0,0,0.25);">
-      <thead class="thead-dark" style="background:black; color:white;">
+    <table style=" border:0px;">
+      <thead class="thead-dark" style="background:rgb(112, 112, 112); color:white;">
         <tr>
           <td>IDENTIFICACION</td>
           <td>NOMBRE</td>
@@ -25,7 +25,7 @@
           <td>{{user.direccion_cliente}}</td>
           <div class="botones">
             <td><button class="btn btn-danger text-white" (click)="Eliminar(user.id_cliente)">Borrar</button>&nbsp;<button
-                class="btn btn-info text-white" (click)="Seleccionar(user.id_cliente)">Seleccionar</button></td>
+                class="btn btn-info text-white" (click)="Seleccionar(user.id_cliente)"><a href="index#login">Seleccionar</a></button></td>
           </div>
         </tr>
       </tbody>
@@ -36,7 +36,7 @@
     <p>No hay articulos.</p>
   </ng-template>
 
-  <div class="login">
+  <div class="login" id="login">
     <h1>gestionar usuario</h1>
     <p>
       Nombre <input type="text" class="form-control m-1" type="text" [(ngModel)]="usuario.nombre_cliente"

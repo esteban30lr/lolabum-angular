@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+  <div class="container">
+    <div class="login">
+      <h1>CREAR CUENTA</h1>
+      <h1>{{estado}}</h1>
+      <p>
+        Identificacion <input class="form-control m-1" type="text" [(ngModel)]="usuario.id"
+          placeholder="square pantsu">
+      </p>
+      <p>
+        Clave <input  class="form-control m-1" type="password" [(ngModel)]="usuario.contrasena"
+          placeholder="***********">
+      </p>
+      <div class="row">
+        <div class="col-sm-2 ">
+          <p><button class="btn btn-outline-dark float-left" (click)="Iniciar()">INICIAR SESION</button></p>&nbsp;
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</body>
+</html>

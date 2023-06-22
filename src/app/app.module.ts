@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductoComponent } from './components/producto/producto.component';
 import { CompraComponent } from './components/compra/compra.component';
+import { IniciarComponent } from './components/iniciar/iniciar.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CompraComponent } from './components/compra/compra.component';
     IndexComponent,
     TestComponent,
     ProductoComponent,
-    CompraComponent
+    CompraComponent,
+    IniciarComponent
   ],
   imports: [
     BrowserModule,

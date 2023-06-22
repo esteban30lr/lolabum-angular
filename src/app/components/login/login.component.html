@@ -3,10 +3,26 @@
 <body>
   <div class="container">
     <div class="login">
-      <h1>INICIAR SESIÓN</h1>
+      <h1>CREAR CUENTA</h1>
       <h1>{{estado}}</h1>
       <p>
         Identificacion <input class="form-control m-1" type="text" [(ngModel)]="usuario.id"
+          placeholder="square pantsu">
+      </p>
+      <p>
+        Nombre <input class="form-control m-1" type="text" [(ngModel)]="usuario.nombre"
+          placeholder="square pantsu">
+      </p>
+      <p>
+        Direccion <input class="form-control m-1" type="text" [(ngModel)]="usuario.direccion"
+          placeholder="square pantsu">
+      </p>
+      <p>
+        Telefono <input class="form-control m-1" type="text" [(ngModel)]="usuario.telefono"
+          placeholder="square pantsu">
+      </p>
+      <p>
+        Web <input class="form-control m-1" type="text" [(ngModel)]="usuario.web"
           placeholder="square pantsu">
       </p>
       <p>
@@ -16,12 +32,6 @@
       <div class="row">
         <div class="col-sm-2 ">
           <p><button class="btn btn-outline-dark float-left" (click)="Iniciar()">Agregar</button></p>&nbsp;
-        </div>
-        <div class="col-sm-2 ">
-          <p><button class="btn btn-outline-dark float-left" (click)="MostrarUsuario()">Mostrar</button></p>&nbsp;
-        </div>
-        <div class="col-sm-2 ">
-          <p><button class="btn btn-outline-dark float-left" (click)="ReiniciarUsuario()">Reiniciar</button></p>&nbsp;
         </div>
       </div>
   

@@ -6,6 +6,7 @@ import { MainComponent } from './components/main/main.component';
 import { TestComponent } from './components/test/test.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { CompraComponent } from './components/compra/compra.component';
+import { IniciarComponent } from './components/iniciar/iniciar.component';
 
 const routes: Routes = [
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
         path: 'compra',
         component: CompraComponent
+    },
+    {
+        path: 'iniciar',
+        component: IniciarComponent
     }
 ];
 

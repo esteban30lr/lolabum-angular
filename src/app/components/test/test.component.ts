@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PhpService } from 'src/app/services/php.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class TestComponent implements OnInit {
     correo_cliente:null
   }
 
-  constructor(private phpservide: PhpService) { }
+  constructor(private phpservide: PhpService, private router: Router) { }
 
   ngOnInit() {
     this.MostrarTodo();
@@ -61,6 +62,10 @@ export class TestComponent implements OnInit {
       this.usuario = res[0];
     });
     console.log(this.usuarios);
+    const element = document.getElementById("login");
+    if (element) {
+      element.scrollIntoView();
+    }
   }
 
   Modificar(){

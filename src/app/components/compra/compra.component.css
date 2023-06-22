@@ -1,186 +1,142 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    height: 100vh;
-}
-
-.container {
-    border-radius: 4px;
-}
-
-h1 {
-    text-align: left;
-    margin-left: 20%;
-}
-
-.tabla {
-    padding: 3rem;
-    margin: 1%;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-left: 5%;
-}
-
-.tabla button {
-    border-radius: 4px;
-    color: #FFF;
-    background: rgb(124, 18, 18);
-    border: none;
-    transition: background-color 0.5s;
-    padding: auto;
-    margin-top: 5px;
-    height: 90%;
-    width: max-content;
-}
-
-.tabla button:hover {
-    color: #FFF;
-    background: red;
-    cursor: pointer;
-}
-
-.tabla thead tr td {
-    margin: 2%;
-    padding: 0.5rem;
-    text-transform: uppercase;
-    border-radius: 4px;
-}
-
-table {
-    border-radius: 4px;
-}
-
-.login {
-    margin-top: 180px;
-    margin-left: 5%;
-    width: 350px;
-    height: 750px;
-    background: #000;
-    color: #FFF;
-    top: 50%;
-    left: 75%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-    border-radius: 10px;
-}
-
-.login label {
-    margin: 0;
-    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
     font-weight: bold;
-    display: block;
-}
-
-.login h1 {
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-}
-
-.login input {
+    margin: 0 0 20px;
+  }
+  
+  table {
     width: 100%;
+    border-collapse: collapse;
+    box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-}
-
-.login input[type="text"],
-.login input[type="password"] {
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
-    outline: none;
-    height: 40px;
+  }
+  
+  th {
+    background-color: rgb(0, 0, 0);
     color: white;
-    font-size: 16px;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.login button {
-    border: none;
-    outline: none;
-    height: 40px;
-    background: rgb(160, 17, 17);
-    font-size: 18px;
-    border-radius: 20px;
-    color: #FFF;
-    transition: background-color 0.5s;
-}
-
-.login button:hover {
-    color: #FFF;
-    background: red;
-    cursor: pointer;
-}
-
-.login a {
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgray;
-}
-
-.login a:hover {
-    color: white;
-}
-
-/* Estilo base para el select */
-select {
-    appearance: none;
-    /* Quita el estilo nativo del sistema operativo */
     padding: 10px;
-    /* Espaciado interno */
-    font-size: 16px;
-    /* Tamaño de fuente */
+  }
+  
+  td {
     border: 1px solid #ccc;
-    /* Borde */
-    border-radius: 4px;
-    /* Bordes redondeados */
+    padding: 10px;
+  }
+  
+  .botones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-info {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .login {
     background-color: #fff;
-    /* Color de fondo */
-    color: #333;
-    /* Color del texto */
-    width: 200px;
-    /* Ancho del select */
-}
-
-/* Estilo al pasar el cursor por encima */
-select:hover {
-    border-color: #999;
-    /* Borde resaltado */
-}
-
-/* Estilo al enfocar el select */
-select:focus {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-outline-dark {
+    color: #343a40;
+    background-color: transparent;
+    border: 1px solid #343a40;
+  }
+  
+  .float-left {
+    float: left;
+  }
+  
+  .float-right {
+    float: right;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .col-sm-2 {
+    width: 50%;
+    float: left;
+  }
+  
+  .col-sm-2.offset-md-2 {
+    width: 50%;
+    float: right;
+  }
+  
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  .col-sm-2 p,
+  .col-sm-2.offset-md-2 p {
+    margin: 0;
+  }
+  
+  .ng-valid[readonly] {
+    border-color: transparent;
+    background-color: #f8f8f8;
+    cursor: not-allowed;
+  }
+  
+  .ng-valid[readonly]::placeholder {
+    color: #aaa;
+  }
+  
+  .ng-valid[readonly]:focus {
     outline: none;
-    /* Quita el contorno al enfocar */
-    border-color: #555;
-    /* Borde resaltado */
-}
-
-/* Estilo de la flecha desplegable */
-select::after {
-    content: '\25BC';
-    /* Código Unicode de la flecha hacia abajo */
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    /* Evita que se pueda hacer clic en la flecha */
-}
-
-/* Estilo al desplegar las opciones */
-select option {
-    background-color: #fff;
-    /* Color de fondo de las opciones */
-    color: #333;
-    /* Color del texto de las opciones */
-}
+  }

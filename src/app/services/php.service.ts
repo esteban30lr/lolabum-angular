@@ -37,8 +37,14 @@ export class PhpService {
     return this.http.get(`${this.url}cliente/seleccionar.php?id=${id}`);
   }
 
-  iniciarsesion(id: any, contrasena: any) {
-    return this.http.get(`${this.url}cliente/iniciarsesion.php?id=${id}&contrasena=${contrasena}`);
+  crearAdmin(usuario:any) {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.post(`${this.url}sesion/login.php`, JSON.stringify(usuario), { headers: headers });
+  }
+
+  iniciarsesion(usuario:any) {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.post(`${this.url}sesion/iniciarsesion.php`, JSON.stringify(usuario), { headers: headers });
   }
 
   modificar(usuario: any) {
