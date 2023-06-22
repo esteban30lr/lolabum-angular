@@ -23,7 +23,7 @@
           <td>{{prove.web_proveedor}}</td>
           <div class="botones">
             <td><button class="btn btn-danger text-white" (click)="Eliminar(prove.id_proveedor)">Borrar</button>&nbsp;<button
-                class="btn btn-info text-white" (click)="Seleccionar(prove.id_proveedor)">Seleccionar</button></td>
+                class="btn btn-info text-white" (click)="Seleccionar(prove.id_proveedor)"><a href="main#login">Seleccionar</a></button></td>
           </div>
         </tr>
       </tbody>
@@ -34,7 +34,7 @@
     <p>No hay articulos.</p>
   </ng-template>
 
-  <div class="login">
+  <div class="login" id="login">
     <h1>gestionar proveedor</h1>
     <p>
       Nombre <input type="text" class="form-control m-1" type="text" [(ngModel)]="proveedor.nombre_proveedor"

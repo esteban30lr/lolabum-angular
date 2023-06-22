@@ -24,9 +24,9 @@
             font-size: large;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            border-radius: 6px;
+            border-radius: 30px;
         }
 
         .lista li:hover {
-            background-color: #86a2e0;
+            background-color: #dadada;
         }

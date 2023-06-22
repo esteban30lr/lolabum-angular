@@ -22,12 +22,14 @@ body {
     border-collapse: collapse;
     box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    border-radius: 4px;
   }
   
   th {
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 10px;
+    border-radius: 4px;
   }
   
   td {
@@ -77,7 +79,7 @@ body {
   }
   
   select {
-    width: 100%;
+    width: 98%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
