@@ -15,6 +15,8 @@ import { CompraComponent } from './components/compra/compra.component';
 import { IniciarComponent } from './components/iniciar/iniciar.component';
 
 
+import { DataTablesModule } from "angular-datatables";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { IniciarComponent } from './components/iniciar/iniciar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

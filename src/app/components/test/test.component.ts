@@ -8,6 +8,7 @@ import { PhpService } from 'src/app/services/php.service';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
+
   tittle = 'VISTA DE USUARIOS'
 
   usuarios=null;
