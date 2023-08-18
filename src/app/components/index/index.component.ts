@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhpService } from 'src/app/services/php.service';
 
 @Component({
   selector: 'app-index',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  estado = null
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
+  
 
 }
